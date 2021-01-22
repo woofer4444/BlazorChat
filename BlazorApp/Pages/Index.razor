@@ -1,0 +1,12 @@
+﻿@page "/"
+
+<div>
+    @foreach (var message in Messages)
+    {
+        <p><span class="text-brand-500">@message.Sender</span>: @message.Message</p>
+    }
+</div>
+
+<input class="border-2 border-brand-500" id="name" @bind="Name" placeholder="name" />
+<input class="border-2 border-brand-500" id="message" @bind="Message" placeholder="message" />
+<button class="border-2 border-brand-500" @onclick=SendMessage>Chat</button>
